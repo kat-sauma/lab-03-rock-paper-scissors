@@ -14,15 +14,33 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png" />
-        </div>
+        <div class="gutter-right">Rock, Paper, Scissors<br>f o r y o u r l i f e.</div>
     </header>
     <main>
-
+        <section class="main-section">
+            <label>
+                <input class="rock" type="radio" name="rps" />
+                <img src="assets/the-rock.jpeg" height="160" width="140" />
+            </label>
+            <label>
+                <input class="paper" type="radio" name="rps" />
+                <img src="assets/the-paper.jpg" height="150" width="150" />
+            </label>
+            <label>
+                <input class="scissors" type="radio" name="rps" />
+                <img src="assets/the-scissor.jpg" height="170" width="220" />
+            </label>
+            <button id="goButton">GO</button>
+            <div class="hidden">
+                <div id="wins"></div>
+                <div id="losses"></div>
+                <div id="total"></div>
+                <div id="throw-result"></div>
+            </div>
+        </section>
     </main>
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+        <div class="copy gutter-right">&copy; 2021 Lucky Kat Code</div>
     </footer>
 
     <script type="module" src="app.js"></script>

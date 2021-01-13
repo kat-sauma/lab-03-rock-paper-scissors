@@ -1,11 +1,11 @@
 # HTML set up
-1. Radio Buttons
+1. Radio Buttons /
     - input type radio: 3 of them
     - images for rock, paper, scissors
     - each button needs "names", "values"
-2. Toss Button
+2. Toss Button /
     - button
-3.Wins/Loss/Total
+3.Wins/Loss/Total /
     - empty divs for each
     - empty div for current throw result
 
