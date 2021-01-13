@@ -99,6 +99,10 @@ footer {
     box-shadow: var(--shadow);
 }
 
+input[type="radio"]:checked {
+    transform: scale(2);
+}
+
 .hidden {
     visibility: hidden;
 }

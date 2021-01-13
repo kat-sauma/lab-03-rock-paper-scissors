@@ -18,24 +18,38 @@
     </header>
     <main>
         <section class="main-section">
-            <label>
-                <input class="rock" type="radio" name="rps" />
+            <div id="rules-of-the-game">
+                These are the rules of the game:<br>
+                1. Rock > Scissors<br>
+                2. Scissors > Paper<br>
+                3. Paper > Rock
+            </div>
+            <label id="rock">
+                <input value="rock" type="radio" name="rps" />
                 <img src="assets/the-rock.jpeg" height="160" width="140" />
             </label>
-            <label>
-                <input class="paper" type="radio" name="rps" />
+            <label id="paper">
+                <input value="paper" type="radio" name="rps" />
                 <img src="assets/the-paper.jpg" height="150" width="150" />
             </label>
-            <label>
-                <input class="scissors" type="radio" name="rps" />
+            <label id="scissor">
+                <input value="scissors" type="radio" name="rps" />
                 <img src="assets/the-scissor.jpg" height="170" width="220" />
             </label>
-            <button id="goButton">GO</button>
-            <div class="hidden">
-                <div id="wins"></div>
-                <div id="losses"></div>
-                <div id="total"></div>
-                <div id="throw-result"></div>
+            <button id="go-button">
+                SHOOT
+            </button>
+            <div class="current-throw">
+
+            </div>
+            <div>
+                <span id="wins"> Won: </span>
+            </div>
+            <div>
+                <span id="losses"> Lost: </span>
+            </div>
+            <div>
+                <span id="total"> Total: </span>
             </div>
         </section>
     </main>

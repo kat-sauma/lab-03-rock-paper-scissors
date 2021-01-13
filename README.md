@@ -8,16 +8,17 @@
 3.Wins/Loss/Total /
     - empty divs for each
     - empty div for current throw result
+4. Rules /
 
-1) Grab DOM elements by ID
+1) Grab DOM elements by ID /
 2) Initialize some state
     - wins: 0
     - total: 0
 3) Add event listeners to the button
     - ON CLICK
         1) store automated computer throw
-            - random: heads/tails
-            - math.random() : if/then 1 heads 0 tails 
+            - random: rock/paper/scissor
+            - math.random() : if/then 1 rock 0 paper or -1 scissor 
         2) store user's throw
             - grab the checked input, get value
         3) compare user's guess to computer throw
