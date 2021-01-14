@@ -46,3 +46,12 @@ shootButton.addEventListener('click', () => {
         currentThrow.textContent = `${userChoice} & ${computerDraw} that's a draw, cowboy.`;
     }
 });
+
+resetButton.addEventListener('click', () => {
+    wins = 0;
+    losses = 0;
+    draw = 0;
+    total = 0;
+
+
+})
