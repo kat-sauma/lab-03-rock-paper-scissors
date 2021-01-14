@@ -9,14 +9,27 @@ const totalSpan = document.getElementById('total');
 
 // initialize state
 let wins = 0;
+let losses = 0;
 let total = 0;
+
 // set event listeners to update state and DOM
 shootButton.addEventListener('click', () => {
-    total++
+    total++;
     const computerThrow = Math.ceil(Math.random() * 3);
     const computerDraw = getRandomThrow(computerThrow);
-    // const chosenButton = document.querySelector('input[type="radio"] :checked');
-    console.log('computerThrow');
+    totalSpan.textContent = `Total: ${total}`;
+    const chosenRadioButton = document.querySelector('input[type="radio"]:checked');
+
+    const userChoice = chosenRadioButton.value;
 
 
+    if (userChoice === computerDraw) {
+        wins++;
+        winsSpan.textContent = `Won: ${wins}`;
+        currentThrow.textContent = `eeeeggssscellent ${userChoice} is correct.`;
+    } else {
+        losses++;
+        lostSpan.textContent = `Lost: ${losses}`;
+        currentThrow.textContent = `weakling, ${userChoice} is no match for ${computerDraw}.`;
+    }
 });
