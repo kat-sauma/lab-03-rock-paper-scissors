@@ -43,9 +43,16 @@
                 <input value="scissors" type="radio" name="rps" />
                 <img src="assets/the-scissor.jpg" height="170" width="220" />
             </label>
-            <button id="go-button">
-                SHOOT
-            </button>
+            <div id="shoot">
+                <button id="go-button">
+                    SHOOT
+                </button>
+            </div>
+            <div id="reset" class="hidden">
+                <button id="replay-button">
+                    REPLAY
+                </button>
+            </div>
             <div id="current-throw">
 
             </div>
@@ -60,6 +67,9 @@
             </div>
             <div>
                 <span id="total"> Total: </span>
+            </div>
+            <div>
+                <span id="replay"> Replay: </span>
             </div>
         </section>
     </main>

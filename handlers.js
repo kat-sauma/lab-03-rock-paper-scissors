@@ -1,4 +1,4 @@
-import { getRandomThrow, didUserWin } from './get-random-throw.js';
+import { getRandomThrow, didUserWin, } from './get-random-throw.js';
 
 
 const currentThrow = document.getElementById('current-throw');
@@ -6,11 +6,15 @@ const winsSpan = document.getElementById('wins');
 const lostSpan = document.getElementById('losses');
 const drawSpan = document.getElementById('draw');
 const totalSpan = document.getElementById('total');
+const resetSpan = document.getElementById('replay');
+const showShootButton = document.getElementById('shoot');
+const hideReplayButton = document.getElementById('reset');
 
 let wins = 0;
 let losses = 0;
 let draw = 0;
 let total = 0;
+let replay = 0;
 
 export function playGame() {
     total++;
@@ -23,6 +27,10 @@ export function playGame() {
 
     const player = userChoice;
     const computer = computerDraw;
+
+    showShootButton.style.display = 'none';
+    hideReplayButton.style.display = '';
+    hideReplayButton.classList.remove('hidden');
 
     if (didUserWin(player, computer) === 'win') {
         wins++;
@@ -41,4 +49,15 @@ export function playGame() {
         drawSpan.textContent = `Draw: ${draw}`;
         currentThrow.textContent = `${userChoice} & ${computerDraw} that's a draw, cowboy.`;
     }
+}
+
+
+export function replayGame() {
+    replay++;
+    resetSpan.textContent = `Replay: ${replay}`;
+
+
+    hideReplayButton.style.display = 'none';
+    showShootButton.style.display = '';
+    hideReplayButton.classList.add('hidden');
 }
